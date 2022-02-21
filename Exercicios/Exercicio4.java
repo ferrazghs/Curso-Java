@@ -1,25 +1,26 @@
-package estrutura_sequencial;
+package estrutura_condicional;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercicio4 {
 
 	public static void main(String[] args) {
-
-		Locale.setDefault(Locale.US);
+		
 		Scanner sc = new Scanner(System.in);
-
-		int n;
-	    Double h,s,rs;
-	    
-		n = sc.nextInt();
-		h = sc.nextDouble();
-		s = sc.nextDouble();
+		int i,f,rs;
 		
-		rs = h * s; 
+		i = sc.nextInt();
+		f = sc.nextInt();
 		
-		System.out.printf("NUMBER : " + n + "\n" + "SALARY :  " +  "U$ %.2f",rs);
+		if (i > f) {
+			rs = (f + 24) - i;
+			System.out.println("O JOGO DUROU " + rs + " HORAS");
+		}else if(f > i){
+			rs = f - i;
+			System.out.println("O JOGO DUROU " + rs + " HORAS");
+		}else {
+			System.out.println("O JOGO DUROU 24 HORAS");
+		}
 		
 		sc.close();
 	}

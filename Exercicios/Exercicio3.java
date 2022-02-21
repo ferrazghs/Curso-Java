@@ -1,4 +1,4 @@
-package estrutura_sequencial;
+package estrutura_condicional;
 
 import java.util.Scanner;
 
@@ -7,17 +7,17 @@ public class Exercicio3 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		int a,b,c,d,rs;
+		int a,b;
 		
 		a = sc.nextInt();
 		b = sc.nextInt();
-		c = sc.nextInt();
-		d = sc.nextInt();
 		
-		rs = ((a*b) - (c*d));
+		if (a % b == 0 || b % a == 0) {
+			System.out.println("SÃO MULTIPLOS");
+		}else {
+			System.out.println("NÃO SÃO MULTIPLOS");
+		}
 		
-		System.out.println("DIFERENÇA : " + rs);
-
 		sc.close();
 	}
 

@@ -1,4 +1,4 @@
-package estrutura_sequencial;
+package estrutura_condicional;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -9,25 +9,20 @@ public class Exercicio6 {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-
-	    Double v1,v2,v3,t,c,tr,qd,rt;
-	    Double pi = 3.14159;
-	    
-		v1 = sc.nextDouble();
-		v2 = sc.nextDouble();
-		v3 = sc.nextDouble();
-
-		t = v1 * v3 / 2;
-		c = pi * v3 * v3;
-		tr = ((v1 + v2) * v3) / 2;
-		qd = v2 * v2;
-		rt = v1 * v2;
+		Double a;
 		
-		System.out.printf("TRIANGULO: %.3f%n",t);
-		System.out.printf("CIRCULO: %.3f%n", c);
-		System.out.printf("TRAPÉZIO: %.3f%n" , tr);
-		System.out.printf("QUADRADO: %.3f%n", qd );
-		System.out.printf("RETÂNGULO: %.3f%n", rt);
+		a = sc.nextDouble();
+		
+		if ( a >= 0 && a <= 25) {
+			System.out.println("Intervalo [0,25]");
+		}else if(a >= 25 && a <= 50){
+			System.out.println("Intervalo [25,50]");
+		}else if(a > 50 && a <= 75) {
+			System.out.println("Intervalo [50,75]");
+		}else if(a > 75 && a <= 100) {
+			System.out.println("Intervalo [75,100]");
+		}else
+			System.out.println("Fora do intervalo");
 
 		sc.close();
 	}

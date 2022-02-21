@@ -1,4 +1,4 @@
-package estrutura_sequencial;
+package estrutura_condicional;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -9,21 +9,27 @@ public class Exercicio5 {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-
-		int c1,c2,np1,np2;
-	    Double v1,v2,rs;
-	    
-		c1 = sc.nextInt();
-		np1 = sc.nextInt();
-		v1 = sc.nextDouble();
-
-		c2 = sc.nextInt();
-		np2 = sc.nextInt();
-		v2 = sc.nextDouble();
-
-		rs = (np1 * v1) + (np2 * v2);
+		Double c,qtd,rs;
 		
-		System.out.printf("VALOR A PAGAR: %.2f ",rs);
+		c = sc.nextDouble();
+		qtd = sc.nextDouble();
+		
+		if (c == 1) {
+			rs = qtd * 5;
+			System.out.printf("TOTAL: R$  %.2f", rs);
+		}else if(c == 2){
+			rs = qtd * 4.50;
+			System.out.printf("TOTAL: R$  %.2f", rs);
+		}else if(c == 3){
+			rs = qtd * 5;
+			System.out.printf("TOTAL: R$  %.2f", rs);
+		}else if(c == 4) {
+			rs = qtd * 2;
+			System.out.printf("TOTAL: R$  %.2f", rs);
+		}else {
+			rs = qtd * 1.50;
+			System.out.printf("TOTAL: R$  %.2f", rs);
+		}
 		
 		sc.close();
 	}
