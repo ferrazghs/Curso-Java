@@ -1,23 +1,36 @@
-package estrutura_condicional;
+package estrutura_repetitiva_while;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercicio2 {
 
 	public static void main(String[] args) {
-
+		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		int a;
+		int x,y;
 		
-		a = sc.nextInt();
+		x = sc.nextInt();
+		y = sc.nextInt();
 		
-		if( a % 2 == 0) {
-			System.out.println("PAR");
-		}else {
-			System.out.println("ÍMPAR");
+		while(x != 0 && y != 0) {		
+			
+			if (x > 0 && y > 0) {
+				System.out.println("Primeiro");
+			}else if(x < 0 && y > 0){
+				System.out.println("Segundo");
+			}else if (x < 0  && y < 0){
+				System.out.println("Terceiro");
+			}else if (x > 0  && y < 0){
+				System.out.println("Quarto");
+			}
+			
+			x = sc.nextInt();
+			y = sc.nextInt();
 		}
-		
-		sc.close();
+			sc.close();
 	}
-
 }
+
+
