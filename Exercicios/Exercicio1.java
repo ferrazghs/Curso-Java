@@ -1,4 +1,4 @@
-package estrutura_repetitiva_while;
+package estrutura_repetitiva_for;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -9,14 +9,15 @@ public class Exercicio1 {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		int sn = sc.nextInt();
-		
-		while(sn != 2002) {
-			System.out.println("Senha Invalida");
-			sn = sc.nextInt();
+
+		int x = sc.nextInt();
+
+		for (int i = 1; i <= x; i++) {
+			if (i % 2 != 0) {
+				System.out.println(i);
+			}
 		}
-			System.out.println("Acesso permitido");
-			sc.close();
+		sc.close();
 	}
 
 }

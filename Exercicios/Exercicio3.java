@@ -1,4 +1,4 @@
-package estrutura_repetitiva_while;
+package estrutura_repetitiva_for;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -10,25 +10,22 @@ public class Exercicio3 {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		int alc = 0;
-		int gsl = 0;
-		int die = 0;
+		int n = sc.nextInt();
+		double result = 0;
 
-		int cod = sc.nextInt();
+		for (int i = 0; i < n; i++) {
 
-		while (cod != 4) {
+			double x1 = sc.nextDouble();
+			double x2 = sc.nextDouble();
+			double x3 = sc.nextDouble();
 
-			if (cod == 1) {
-				alc += 1;
-			} else if (cod == 2) {
-				gsl += 1;
-			} else if (cod == 3) {
-				die += 1;
-			}
-			cod = sc.nextInt();
+			result = (x1 * 2 + x2 * 3 + x3 * 5) / 10.0;
+
+			System.out.printf("\n%.1f", result);
+
 		}
 
-		System.out.printf("MUITO OBRIGADO" + "\nAlcool: " + alc + "\nGasolina: " + gsl + "\nDiesel: " + die);
 		sc.close();
+
 	}
 }

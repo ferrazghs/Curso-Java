@@ -3,7 +3,7 @@ package estrutura_repetitiva_for;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Exercicio2 {
+public class Exercicio4 {
 
 	public static void main(String[] args) {
 
@@ -11,22 +11,24 @@ public class Exercicio2 {
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
-		int in = 0;
-		int out = 0;
+		double result = 0;
 
 		for (int i = 0; i < n; i++) {
 
-			int x = sc.nextInt();
+			double x1 = sc.nextInt();
+			double x2 = sc.nextInt();
 
-			if (x >= 10 && x <= 20) {
-				in += 1;
+			if (x2 == 0) {
+				System.out.println("Divisão impossivel");
 			} else {
-				out += 1;
+				result = x1 / x2;
+				System.out.println(result);
 			}
+
 		}
 
-		System.out.println(in + " In " + "\n" + out + " Out");
 		sc.close();
+
 	}
 
 }

@@ -3,7 +3,7 @@ package estrutura_repetitiva_for;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Exercicio2 {
+public class Exercicio6 {
 
 	public static void main(String[] args) {
 
@@ -11,21 +11,12 @@ public class Exercicio2 {
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
-		int in = 0;
-		int out = 0;
 
-		for (int i = 0; i < n; i++) {
-
-			int x = sc.nextInt();
-
-			if (x >= 10 && x <= 20) {
-				in += 1;
-			} else {
-				out += 1;
+		for (int i = 1; i <= n; i++) {
+			if (n % i == 0) {
+				System.out.println(i);
 			}
 		}
-
-		System.out.println(in + " In " + "\n" + out + " Out");
 		sc.close();
 	}
 
